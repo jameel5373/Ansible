@@ -1,13 +1,3 @@
 [Web]
 18.212.241.226
 
-[catalogue]
-
-
-[cart]
-
-
-[roboshop:children]
-Web
-cart
-catalogue
