@@ -1,12 +1,12 @@
 - name: Install and run nginx
   become: yes
-  hosts: 18.212.241.226
-  tasks:
+  hosts: 18.212.241.226 #taret host
+   tasks:
   - name: install nginx
     ansible.builtin.package:
      name: nginx
      state: present
-  - name: run enginx
+  - name: run nginx
     ansible.builtin.service:
      name: nginx
      state: started
