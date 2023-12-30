@@ -1,0 +1,19 @@
+- name: Jameel #play1
+  DOB: "Jan-22-1993"
+  Address: #if multiple lines and this is one object
+    address-line1: Lingapuram
+    address-line2: Chittor
+    city: Pungaur
+  email: s.jameel9642@gmail.com
+
+- name: Sekhar #play2
+  DOB: "Feb-23-1997"
+  Address: #list of addresses
+  - address-line1: Sanat Nagar #list1
+    address-line2: Vivek road
+    city: CTR
+  - address-line1: Bhoopathi nagar #list2
+    address-line2: Old road
+    city: CTR
+  email: sekar9943@gmail.com
+
