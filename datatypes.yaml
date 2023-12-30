@@ -1,6 +1,6 @@
 - name: checking data types
   hosts: localhost
-  cars:
+  vars:
     NAME: jameel # key value type
     SKILLS: # list type
     - Devops
