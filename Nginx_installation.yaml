@@ -9,4 +9,4 @@
   - name: run enginx
     ansible.builtin.service:
      name: nginx
-     stte: started
+     state: started
