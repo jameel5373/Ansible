@@ -5,17 +5,17 @@
     - name: check roboshop user exists or not
       ansible.builtin.command: id roboshop
       register: user # to record the output of above command
-      ignore_error: true #ansible will not exit even though there is error
+      ignore_errors: true #ansible will not exit even though there is error
 
     - name: print variable value
       ansible.builtin.debug:
         msg: "user output is {{user}}"
 
-    - name: print ext status
+    - name: print exit status
       ansible.builtin.debug
         msg: "status is : {{user.rc}}"
 
-    - name: create uer
+    - name: create user
       ansible.builtin.user:
         name: roboshop
       when: user.rc != 0 #condition
