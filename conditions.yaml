@@ -1,0 +1,21 @@
+- name: checking id roboshop exists or not and if not creeate else skip
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: check roboshop user exists or not
+      ansible.builtin.command: id roboshop
+      register: user # to record the output of above command
+      ignore_error: true #ansible will not exit even though there is error
+
+    - name: print variable value
+      ansible.builtin.debug:
+        msg: "user output is {{user}}"
+
+    - name: print ext status
+      ansible.builtin.debug
+        msg: "status is : {{user.rc}}"
+
+    - name: create uer
+      ansible.builtin.user:
+        name: roboshop
+      when: user.rc != 0 #condition

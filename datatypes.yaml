@@ -10,7 +10,7 @@
       Devops: 1 year
       Linux: 5 years
       Ansible: 1 year
-    Trainer: true
+    Trainer: true #boolean
   tasks:
   - name: print key value pair
     ansible.builtin.debug:
